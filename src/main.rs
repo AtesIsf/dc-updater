@@ -11,10 +11,10 @@ struct AtomicState {
 
 impl AtomicState {
     fn new(version: String) -> Self {
-        let file_path = String::from("/opt/discord-canary/resources/build_info.json");
+        let file_path = String::from("/opt/discord/resources/build_info.json");
 
         let mut fields = HashMap::new();
-        fields.insert(String::from("releaseChannel"), String::from("canary"));
+        fields.insert(String::from("releaseChannel"), String::from("stable"));
         fields.insert(String::from("version"), version);
 
         AtomicState { file_path, fields }
